@@ -1,5 +1,5 @@
 
-name: github pages
+name: github pages workflow for acme-corporation
 
 on:
   push:
@@ -17,11 +17,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.78.2'
+          hugo-version: 'latest'
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL=https://kingcode.github.io/acme-corporation/
+        run: hugo --minify --baseURL=https://kingcode.github.io/GitHubPages
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
